@@ -36,10 +36,7 @@ const images = [
 const ulEl = document.querySelector('#gallery');
 
 const makeGallery = ({ url, alt }) => {
-  return `
-    <li>
-      <img src="${url}" alt="${alt}" width=320>
-    </li>`
+  return `<li><img src="${url}" alt="${alt}" width=320></li>`
 };
 
 const list = images.map(makeGallery).join('');
