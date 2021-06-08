@@ -7,8 +7,13 @@ inputEL.addEventListener('blur', onInputBlur);
 function onInputBlur() {
     if (inputEL.value.length === maxInputlenght) {
         inputEL.classList.add("valid");
-        inputEL.classList.remove("invalid");
-    } else inputEL.classList.add("invalid");
+        inputEL.classList.remove("invalid");  
+    }
+    
+    if (inputEL.value.length !== maxInputlenght) {
+        inputEL.classList.add("invalid");
+        inputEL.classList.remove("valid");
+    }
     
     if (inputEL.value.length === 0) {
         inputEL.classList.remove("valid");
